@@ -15,14 +15,14 @@ namespace RegistrationWithMailCode
             InitializeComponent();
         }
 
-        private async void SignInBtn_Click(object sender, RoutedEventArgs e)
+        private void SignInBtn_Click(object sender, RoutedEventArgs e)
         {
             if (EmailTB.Text != string.Empty || PasswordTB.Password != string.Empty)
             {
                 CodeWindow codeWindow = new CodeWindow();
                 codeWindow.Show();
 
-                MailSender.SendCode("seva.em07@mail.ru");
+                MailSender.SendCode(EmailTB.Text);
             }
             else
             {

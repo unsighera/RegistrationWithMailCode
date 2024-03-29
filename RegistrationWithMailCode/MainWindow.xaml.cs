@@ -68,8 +68,9 @@ namespace RegistrationWithMailCode
                 using (MailMessage message = new MailMessage(fromM, toM))
                 using (SmtpClient smtpClient = new SmtpClient())
                 {
-                    message.Subject = "Оформленеи кредита"; // Заголовок
-                    message.Body = $"<h1>This is code for you registration : {code}</h1>"; //Содержание
+                    message.Subject = "Славянский секс-шоп «Тихий Омут»"; // Заголовок
+                    message.Body = $"<h1>Это код от ядерки : {code}</h1>"; //Содержание
+                    
                     message.IsBodyHtml = true;
 
                     smtpClient.Host = "smtp.mail.ru";
